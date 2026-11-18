@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Interview Prep Tracker</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>🎯 .NET Interview Prep: 60-Day Plan</h1>
+  <div id="user" hidden><span id="avatar"></span><span id="mail"></span><button id="out">Logout</button></div>
+</header>
+<section id="login" class="card">
+  <h2>Login</h2>
+  <label>Email address<input id="email" type="email" placeholder="yourname@gmail.com" autocomplete="email"></label>
+  <button id="go" class="pri">Continue</button>
+  <p class="note">No password or OTP needed. Your progress is saved on this device under this email.</p>
+  <p id="err" class="err"></p>
+</section>
+<div id="app" hidden>
+<p id="quote"></p>
+<nav id="tabs"><button data-v="today" class="on">Today</button><button data-v="all">All Days</button><button data-v="road">Roadmap</button><button data-v="topics">Topics</button><button data-v="hr">HR Questions</button></nav>
+<main>
+<div id="v-today">
+  <section class="stats" id="stats"></section>
+  <div class="bar"><div id="fill"></div></div>
+  <section class="card" id="day"></section>
+  <h2>60-Day Chain <small>(click a day to open it)</small></h2>
+  <section class="grid" id="grid"></section>
+  <div class="legend"><span class="d done"></span>Done <span class="d part"></span>Partial <span class="d hol"></span>Holiday <span class="d miss"></span>Missed <span class="d today"></span>Today</div>
+</div>
+<section id="v-list" hidden></section>
+<footer>
+  <button id="exp">Export backup</button>
+  <label class="btn">Import backup<input type="file" id="imp" accept=".json" hidden></label>
+  <button id="reset" class="danger">Reset all</button>
+</footer>
+</main>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
